@@ -9,6 +9,6 @@ while (true) {
     alert("felicidades es 4, se nota que pasaste matematicas");
     break;
   } else {
-    alert("burro")
+    alert("burro, estudie las op basiscas")
   }
 }
