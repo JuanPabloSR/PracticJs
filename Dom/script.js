@@ -1,40 +1,23 @@
 const h1 = document.querySelector("h1");
-const p = document.querySelector("p");
-const parrafo = document.querySelector("parrafo");
-const pid = document.querySelector("#pid");
-const input = document.querySelector("input");
+const form = document.querySelector("#form");
+const input1 = document.querySelector("#calculo1");
+const input2 = document.querySelector("#calculo2");
+const btn = document.querySelector("#btnCalcular");
+const pResult = document.querySelector("#result");
 
-console.log({
-  h1,
-  p,
-  parrafo,
-  pid,
-  input,
+form.addEventListener("click", sumarInputValues);
+
+function sumarInputValues(event) {
+  //console.log({event});
+  event.preventDefault();
+  const suma = input1.value + input2.value;
+  pResult.innerText = "El total es " + suma;
+}
+
+window.addEventListener('resize', function() {
+  console.log('El tamaño de la ventana ha cambiado');
 });
 
-console.log(input.value);
-
-//Nos permite modificar una etiqueta
-h1.innerHTML = "toc, toc quien es? <br> yo, el chapulin colorado";
-h1.setAttribute("pantalla", "lg");
-console.log(h1.getAttribute("pantalla"));
-
-// p.setAttribute('class', 'xd')
-// console.log(p.getAttribute('class'))
-
-// p.classList.add('verde')
-// p.classList.remove('verde')
-
-console.log(p.getAttribute("class"));
-
-// input.value('xdxd')
-const img = document.createElement("img");
-
-img.setAttribute('src','https://i.pinimg.com/originals/af/17/a4/af17a45936d0a6a129d72b2165e90a7f.jpg')
-
-
-console.log(img)
-
-pid.innerHTML = ''
-pid.append(img)
-
+document.querySelector('#miCampoDeTexto').addEventListener('keydown', function(event) {
+  console.log(`Presionaste la tecla ${event.key}`);
+});
